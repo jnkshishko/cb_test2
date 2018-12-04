@@ -23,12 +23,6 @@ public class Car {
     @Column(name = "model")
     private String model;
 
-//    @Column(name = "owner_id")
-//    private Long owner_id;
-//
-//    @Column(name = "fine_id")
-//    private Long fine_id;
-
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "owner_id", nullable = false)
     private Owner owner;
@@ -63,22 +57,6 @@ public class Car {
         this.model = model;
         this.owner = owner;
     }
-
-//    public Long getOwner_id() {
-//        return owner_id;
-//    }
-//
-//    public void setOwner_id(Long owner_id) {
-//        this.owner_id = owner_id;
-//    }
-//
-//    public Long getFine_id() {
-//        return fine_id;
-//    }
-//
-//    public void setFine_id(Long fine_id) {
-//        this.fine_id = fine_id;
-//    }
 
     public Long getId() {
         return id;

@@ -24,10 +24,6 @@ public class OwnerDao {
         String stringQuery = "SELECT owner FROM Owner owner WHERE ";
 
         if (partsOfName != null) {
-
-//            for (String part : partsOfName) {
-//                part = part.toLowerCase();
-//            }
             for (int i = 0; i < partsOfName.size(); i++) {
                 if (i > 0) {
                     stringQuery += " AND ";

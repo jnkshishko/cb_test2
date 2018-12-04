@@ -36,6 +36,7 @@
                     <td>${report.cost}</td>
                 </tr>
             </c:forEach>
+            <button onclick="location.href='index.jsp'">Назад</button>
         </table>
     </div>
 </body>

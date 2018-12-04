@@ -18,7 +18,7 @@
         }
         td, th {
             padding: 3px;
-            border: solid black;
+            border: 1px solid black;
         }
     </style>
     <title>Детали штрафа</title>

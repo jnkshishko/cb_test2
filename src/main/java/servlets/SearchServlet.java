@@ -74,8 +74,9 @@ public class SearchServlet extends HttpServlet {
                 }
             }
             req.setAttribute("answers", answerDTOS);
+            req.setAttribute("show", false);
             req.getRequestDispatcher("index.jsp").forward(req, resp);
-        } else {
+        } else if(!"".equals(fullName) && !"".equals(gosnumber)){
             try {
                 car = carModule.getCarByGosnumber(gosnumber);
                 if(car != null) {
@@ -92,5 +93,6 @@ public class SearchServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }
