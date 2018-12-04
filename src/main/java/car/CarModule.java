@@ -29,12 +29,15 @@ public class CarModule {
         List<Object[]> objects = carDao.getFinesIds(n);
         List<CountDTO> result = new ArrayList<>();
 
-        for(Object[] o:objects){
-            CountDTO countDTO = new CountDTO();
-            countDTO.setFineId((Long)o[0]);
-            countDTO.setCount((Long)o[1]);
-            result.add(countDTO);
+        if (objects != null) {
+            for(Object[] o:objects){
+                CountDTO countDTO = new CountDTO();
+                countDTO.setFineId((Long)o[0]);
+                countDTO.setCount((Long)o[1]);
+                result.add(countDTO);
+            }
         }
+
         return result;
 
     }
